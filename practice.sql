@@ -76,7 +76,9 @@ GROUP BY department_name
 ORDER BY avg_salary desc
 LIMIT 1; 
 
+--count employee hired in each year
 
-
+select extract(year from hire_date) as hire_year, count(*) from employees
+GROUP by hire_year
 
 drop Table employees
