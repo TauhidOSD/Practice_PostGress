@@ -68,4 +68,15 @@ select department_name, count(employee_id) from employees
 join departments using (department_id)
 GROUP by department_name;
 
+
+--find department name with hight salary
+select department_name, round(avg(salary)) as avg_salary from employees
+join departments using(department_id)
+GROUP BY department_name
+ORDER BY avg_salary desc
+LIMIT 1; 
+
+
+
+
 drop Table employees
