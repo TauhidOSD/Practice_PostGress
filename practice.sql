@@ -81,4 +81,8 @@ LIMIT 1;
 select extract(year from hire_date) as hire_year, count(*) from employees
 GROUP by hire_year
 
+
+
+
+
 drop Table employees
